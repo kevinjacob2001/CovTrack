@@ -1,0 +1,12 @@
+.login_btn{
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    width: 20rem;
+    border-radius: 20px;
+    height: 4rem;
+}
+.login_btn:hover{
+    background: gainsboro;
+}
