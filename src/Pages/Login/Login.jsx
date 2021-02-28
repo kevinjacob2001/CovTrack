@@ -3,8 +3,10 @@ import { useDispatch } from 'react-redux'
 import { auth ,provider} from '../../firebase'
 import { login, logout } from '../../features/userSlice'
 
+import Google from './google.png'
 import './Login.css'
 import { useHistory } from 'react-router-dom'
+import { Button } from 'react-bootstrap'
 
 function Login() {
     
@@ -48,7 +50,9 @@ function Login() {
 
     return (
         <div>
-<button className="login_btn" onClick={signIn}>Login with Google</button>
+<Button className="login__btn" onClick={signIn}><img width="30px" className="mr-3" src={Google}/>Continue with Google</Button>
+
+
         </div>
     )
 }

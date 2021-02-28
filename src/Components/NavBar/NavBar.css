@@ -10,3 +10,8 @@
 .navText__color{
     color: white !important;
 }
+
+.navbar__link,.navbar__link:hover{
+    text-decoration: none !important;
+}
+

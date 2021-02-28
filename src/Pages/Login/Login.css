@@ -1,12 +1,36 @@
-.login_btn{
+.login__btn{
     left: 50%;
     bottom: 50%;
     transform: translate(-50%,-50%);
     position: absolute;
     width: 20rem;
+    background:  #5b618b !important;
     border-radius: 20px;
     height: 4rem;
+    border: 0 !important;
+    font-size: x-large !important;
 }
-.login_btn:hover{
-    background: gainsboro;
+.login__btn:hover{
+    background: #232F41 !important;
+    
 }
+
+@media only screen and (max-width: 600px) {
+    .login__btn{
+        background:  #5b618b !important;
+        width: 15rem;
+        font-size: large !important;
+    }
+  }
+  
+  .footer__signin__text{
+    bottom: 0 !important;
+    position: relative;
+margin: 0 !important;
+  
+  }
+
+  .bottom__signin__text{
+text-align: center !important;
+
+  }

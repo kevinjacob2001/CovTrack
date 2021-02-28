@@ -27,11 +27,14 @@ function NavBar() {
     <>
       <Navbar  collapseOnSelect expand="lg" className="navbar__bg">
         <Navbar.Brand href="#home" style={{ color: "white" }}>
-          <Link to="/home"><h3 className="text-light">CovTrack19</h3></Link>
+          <Link to="/home" className="navbar__link"><h3 className="text-light " >CovTrack19</h3></Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ml-auto ">
+          <Nav.Link className="ml-auto navText__color" href="#pricing">
+               <Link style={{ color: "white" }} className="navbar__link" to="/home/vaccination-details">Vaccination Details</Link>
+            </Nav.Link>
             <Nav.Link
               className="ml-auto navText__color"
               onClick={logoutUser}
@@ -39,9 +42,7 @@ function NavBar() {
             >
               Logout
             </Nav.Link>
-            <Nav.Link className="ml-auto navText__color" href="#pricing">
-               <Link style={{ color: "white" }} to="/home/vaccination-details">Vaccination Details</Link>
-            </Nav.Link>
+           
             <NavDropdown
               className="ml-auto"
               style={{ color: "white" }}
