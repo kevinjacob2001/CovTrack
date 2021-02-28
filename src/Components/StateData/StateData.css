@@ -1,0 +1,14 @@
+@media only screen and (max-width: 600px) 
+  {
+
+    .state__data__Text{
+        font-size: 2rem !important;
+        font-weight: bold;
+    }
+  } 
+
+  .accordian{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://s3.pixers.pics/pixers/700/FO/61/70/23/74/700_FO61702374_b335dfa84806c6fde21ead5bc3326570.jpg");
+  }

@@ -3,11 +3,11 @@ import axios from 'axios'
 
 import { Card } from "react-bootstrap";
 
-import "./FourCards.css";
+import "./Styles/FourCards.css";
 import NumberFormat from 'react-number-format';
 
 function FourCards() {
-
+    let now = new Date().toString().substring(0,25)
     const [datas,setDatas]=useState([])
 
     useEffect(()=>{
@@ -22,9 +22,10 @@ function FourCards() {
 
   return (
     <div className="container">
+          <p className="date_text">{now}</p>
       <div className="row card_section ">
-      
-        <Card className="card">
+    
+        <Card className="card_single">
           <Card.Body>
             <Card.Title><h3 className="card__mainText">TOTAL CASES</h3></Card.Title>
             <Card.Subtitle className="mb-2 text-muted text-center">
@@ -39,7 +40,7 @@ function FourCards() {
           </Card.Body>
         </Card>
 
-        <Card className="card">
+        <Card className="card_single">
           <Card.Body>
             <Card.Title><h3 className="card__mainText">ACTIVE CASES</h3></Card.Title>
             <Card.Subtitle className="mb-2 text-muted text-center">
@@ -53,7 +54,7 @@ function FourCards() {
           </Card.Body>
         </Card>
      
-        <Card className="card">
+        <Card className="card_single">
           <Card.Body>
             <Card.Title><h3 className="card__mainText">RECOVERED <span className="removed__text">CASES</span></h3></Card.Title>
             <Card.Subtitle className="mb-1 text-muted text-center">
@@ -65,7 +66,7 @@ function FourCards() {
             <h5 className="img__description mr-2">Recovered today:{datas.todayRecovered}</h5>
           </Card.Body>
         </Card>
-        <Card className="card">
+        <Card className="card_single">
           <Card.Body>
             <Card.Title><h3 className="card__mainText">TOTAL DEATHS</h3></Card.Title>
             <Card.Subtitle className="mb-1 text-muted text-center">

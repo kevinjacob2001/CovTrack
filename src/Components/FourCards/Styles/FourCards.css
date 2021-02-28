@@ -5,6 +5,12 @@
   text-align: center;
 }
 
+.date_text{
+    text-align: center;
+    color: white;
+    margin-top: 2rem;
+}
+
 .card_section {
   margin-top: 3rem;
 }
@@ -12,8 +18,8 @@
   font-weight: bold;
 }
 
-.card {
-  border-radius: 0 !important;
+.card_single {
+  border-radius: 5px !important;
   margin: 10px;
   background-position: center center;
   width: 15rem;
@@ -36,11 +42,11 @@
   transition: opacity 0.2s, visibility 0.2s;
 }
 
-.card:hover .img__description {
+.card_single:hover .img__description {
   visibility: visible;
   opacity: 1;
 }
-.card:hover {
+.card_single:hover {
   box-shadow: rgba(14, 14, 34, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   cursor: pointer;
@@ -50,7 +56,7 @@
 
 
 @media only screen and (max-width: 600px) {
-  .card {
+  .card_single {
     width: 8rem !important;
     height: 9rem !important;
   }
@@ -73,6 +79,13 @@
   .img__description {
     font-size: x-small;
   }
+  .date_text{
+    text-align: center;
+    color: white;
+    margin-top: 7rem;
+    font-weight: lighter !important;
+    font-size: smaller;
+}
 }
 
 @media only screen and (min-width: 600px) {
@@ -87,4 +100,12 @@
 .card__number {
   margin-top: 1rem !important;
   font-size: 2.4rem;
+}
+
+.date_text{
+  text-align: center;
+  color: white;
+  margin-top: 8.5rem;
+  font-weight: lighter !important;
+  font-size: smaller;
 }

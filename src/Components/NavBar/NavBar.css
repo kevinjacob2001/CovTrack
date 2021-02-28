@@ -1,6 +1,10 @@
 .navbar__bg{
     background: #232f41 !important ;
-    
+    width: 100vw;
+    z-index: 9999;
+
+    position: fixed !important;
+    top: 0;
 }
 
 .navText__color{

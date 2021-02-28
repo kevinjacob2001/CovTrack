@@ -25,9 +25,9 @@ function NavBar() {
 
   return (
     <>
-      <Navbar collapseOnSelect expand="lg" className="navbar__bg">
+      <Navbar  collapseOnSelect expand="lg" className="navbar__bg">
         <Navbar.Brand href="#home" style={{ color: "white" }}>
-          CovTrack19
+          <h2>CovTrack19</h2>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
