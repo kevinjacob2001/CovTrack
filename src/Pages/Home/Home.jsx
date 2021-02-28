@@ -5,6 +5,7 @@ import NavBar from "../../Components/NavBar/NavBar";
 import FourCards from "../../Components/FourCards/FourCards";
 import StateData from "../../Components/StateData/StateData";
 import ChatBotComponent from "../../Components/ChatBot/ChatBot";
+import ThemedExample from "../../Components/ChatBot/Themed";
 
 function Home() {
   return (
@@ -12,11 +13,11 @@ function Home() {
       {/* Navbar */}
       <NavBar />
 
-      <div className="container">
+      <div className="container ">
         {/* 4  CARDS SECTION */}
         <FourCards />
         <StateData />
-        <ChatBotComponent />
+        <ThemedExample />
       </div>
     </>
   );
