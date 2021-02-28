@@ -1,0 +1,10 @@
+.four__cards__vaccine{
+    margin-top: 6rem !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .four__cards__vaccine{
+        margin-top: 7rem !important;
+    }
+  }
+  

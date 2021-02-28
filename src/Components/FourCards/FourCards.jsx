@@ -33,7 +33,7 @@ function FourCards() {
             </Card.Subtitle>
             <Card.Text className="card__caseCount">
             
-              <NumberFormat  value={datas.cases} displayType={'text'} thousandsGroupStyle="lakh" thousandSeparator={true} renderText={value => <div  className="card__number">{value}</div>} />
+              <NumberFormat className="total_cases"  value={datas.cases} displayType={'text'} thousandsGroupStyle="lakh" thousandSeparator={true} renderText={value => <div  className="card__number">{value}</div>} />
             
             </Card.Text>
             <h5 className="img__description mr-2">Cases today:{datas.todayCases}</h5>

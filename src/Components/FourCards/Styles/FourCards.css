@@ -12,7 +12,7 @@
 }
 
 .card_section {
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 .card__mainText {
   font-weight: bold;
@@ -99,13 +99,13 @@
 }
 .card__number {
   margin-top: 1rem !important;
-  font-size: 2.4rem;
+  font-size: 2.3rem;
 }
 
 .date_text{
   text-align: center;
   color: white;
-  margin-top: 8.5rem;
+  margin-top: 7.5rem;
   font-weight: lighter !important;
   font-size: smaller;
 }

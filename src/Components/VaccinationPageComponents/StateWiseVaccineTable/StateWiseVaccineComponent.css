@@ -1,0 +1,15 @@
+.vaccine__table{
+font-size: large;
+}
+.vaccine__heading{
+    margin-top: 2rem;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .vaccine__table{
+           font-size: x-small;
+    }
+  }
+  
+   

@@ -14,6 +14,7 @@ import NotFound from "./Components/NotFound";
 import { useDispatch, useSelector } from "react-redux";
 import { login, logout, selectUser } from "./features/userSlice";
 import { auth } from "./firebase";
+import VaccinationDetails from "./Pages/VaccinationDetails/VaccinationDetails";
 
 function App() {
   const user = useSelector(selectUser);
@@ -50,10 +51,8 @@ function App() {
             <Route exact path="/home">
               <Home />
             </Route>
-            <Route exact path="/home/world">
-              <div><h1>World Data</h1>
-              <Link to="/home">HOME</Link>
-              </div>
+            <Route exact path="/home/vaccination-details">
+              <VaccinationDetails/>
             </Route>
             <Route path="*" component={NotFound} />
           </Switch>
