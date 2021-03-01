@@ -50,10 +50,19 @@ function Login() {
 
     return (
         <div>
+          <div style={{textAlign:"center"}}>
+          <h1 className="mt-5 text-light" ><b>CovTrack19</b></h1>
+          <p className="text-light mt-4">An End-to-end COVID-19 stats platform</p>
+          </div>
 <Button className="login__btn" onClick={signIn}><img width="30px" className="mr-3" src={Google}/>Continue with Google</Button>
 
+<div className="footer-container">
+  <div className="vertical-center">
+  <p className="footer__text text-center text-light">Proudly from India, for the Globe.</p>
+  </div>
 
-        </div>
+</div>   
+     </div>
     )
 }
 

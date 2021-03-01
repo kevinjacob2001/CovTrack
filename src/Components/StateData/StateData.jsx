@@ -11,14 +11,15 @@ function StateData() {
         useEffect(()=>{
             async function fetchData(){
                 const request=await axios.get("https://api.covid19india.org/state_district_wise.json");
-                console.log(request.data)
+                
                 setstateData(request.data);
             }
             fetchData();
         },[stateData])
 
         let keys = Object.keys(stateData);
-        console.log(keys)
+        //console.log(keys)
+
     return (
       
             <div className="row mt-5">

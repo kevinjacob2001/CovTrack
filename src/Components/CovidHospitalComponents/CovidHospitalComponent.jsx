@@ -39,7 +39,7 @@ function CovidHospitalComponent() {
       admissionCapacity: individual.admissionCapacity,
       hospitalBeds: individual.hospitalBeds,
     }));
-    console.log(arr);
+    //console.log(arr);
 
     arr2 = arr.filter((data) => {
       return data.value === selectedOption;

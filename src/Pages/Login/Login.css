@@ -21,8 +21,11 @@
         width: 15rem;
         font-size: large !important;
     }
+    .footer__text{
+      font-size: small;
+    }
   }
-  
+
   .footer__signin__text{
     bottom: 0 !important;
     position: relative;
@@ -33,4 +36,17 @@ margin: 0 !important;
   .bottom__signin__text{
 text-align: center !important;
 
+  }
+
+  .container-footer {
+    height: 200px;
+    position: relative;
+  
+  }
+  
+  .vertical-center {
+    bottom: 0;
+    left: 50%;
+    position: absolute;
+  transform: translate(-50%,-50%);
   }

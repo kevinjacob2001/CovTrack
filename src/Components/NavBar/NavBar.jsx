@@ -31,7 +31,10 @@ function NavBar() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ml-auto ">
+          <Nav className="ml-auto mr-2">
+          <Nav.Link className="ml-auto navText__color" href="">
+               <Link style={{ color: "white" }} className="navbar__link" to="/home">Home</Link>
+            </Nav.Link>
           <Nav.Link className="ml-auto navText__color" href="">
                <Link style={{ color: "white" }} className="navbar__link" to="/home/vaccination-details">Vaccination Details</Link>
             </Nav.Link>
@@ -39,7 +42,7 @@ function NavBar() {
                <Link style={{ color: "white" }} className="navbar__link" to="/home/covid-hospital-details">Covid hospital details</Link>
             </Nav.Link>
             <Nav.Link
-              className="ml-auto navText__color"
+              className="ml-auto navText__color 2"
               onClick={logoutUser}
               href="#features"
             >
