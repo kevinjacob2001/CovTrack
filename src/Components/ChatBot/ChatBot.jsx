@@ -23,8 +23,8 @@ function ChatBotComponent() {
         
         placeholder=" "
         headerTitle="CovBot"
-        recognitionEnable={true}
-        speechSynthesis={{ enable: true, lang: "en", voice: null }}
+        /*recognitionEnable={true}
+        speechSynthesis={{ enable: true, lang: "en", voice: null }}*/
         steps={[
           {
             id: "1",
