@@ -10,6 +10,23 @@ font-size: large;
     .vaccine__table{
            font-size: x-small;
     }
+    .download__btn{
+        font-size: small !important;
+      }
   }
   
-   
+
+  .download__btn__Section{
+      display: flex;
+      justify-content: flex-end;
+  }
+   .download__btn{
+     background: #232F41 !important;
+     border: 0 !important;
+   }
+
+   .download__btn:hover{
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    border: 0 !important;
+    
+  }

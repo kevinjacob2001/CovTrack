@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Accordion, Card, Table } from "react-bootstrap";
+import { Accordion, Card, Table, Button } from "react-bootstrap";
 import "./StateWiseVaccineComponent.css";
-
+import GetAppIcon from '@material-ui/icons/GetApp';
 import NumberFormat from "react-number-format";
 
 function StateWiseVaccineComponent() {
@@ -13,7 +13,7 @@ function StateWiseVaccineComponent() {
       const request = await axios.get(
         "https://india-covid19vaccine.github.io/api/state_latest.json"
       );
-      console.log(request.data);
+      //console.log(request.data);
       setstateData(request.data);
     }
     fetchData();
@@ -23,6 +23,10 @@ function StateWiseVaccineComponent() {
       <h1 className="text-center text-light vaccine__heading">
         State wise vaccine details
       </h1>
+      <div className="download__btn__Section">
+        <Button className="m-2 download__btn" href="https://india-covid19vaccine.github.io/csv/national_timeline.csv"><GetAppIcon/> National timeline</Button>
+        <Button className="m-2 download__btn" href="https://india-covid19vaccine.github.io/csv/state_timeline.csv"><GetAppIcon/> Statewise timeline</Button>
+      </div>
       <Table responsive striped hover borderless className="vaccine__table">
         <thead style={{ background: "#7ED8F2" }}>
           <tr>

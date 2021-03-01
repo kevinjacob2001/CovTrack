@@ -23,12 +23,12 @@ function ChatBotComponent() {
         
         placeholder=" "
         headerTitle="CovBot"
-        /*recognitionEnable={true}
-        speechSynthesis={{ enable: true, lang: "en", voice: null }}*/
+       /* recognitionEnable={true}
+        speechSynthesis={{ enable: true, lang: "en", voice: null }} */
         steps={[
           {
             id: "1",
-            message: `Hello ${user.displayName} welcome to CovTrack19, Which helpline number do you want?`,
+            message: `Hello ${user.displayName?user.displayName:"user"} welcome to CovTrack19, Which helpline number do you want?`,
             trigger: "2",
           },
           {

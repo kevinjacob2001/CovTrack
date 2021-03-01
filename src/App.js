@@ -15,6 +15,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { login, logout, selectUser } from "./features/userSlice";
 import { auth } from "./firebase";
 import VaccinationDetails from "./Pages/VaccinationDetails/VaccinationDetails";
+import CovidHospitalDetails from "./Pages/CovidHospitalDetails/CovidHospitalDetails";
 
 function App() {
   const user = useSelector(selectUser);
@@ -24,7 +25,7 @@ function App() {
   useEffect(() => {
     console.log("hello");
     auth.onAuthStateChanged((authUser) => {
-      console.log("user is", authUser);
+      //console.log("user is", authUser);
       if (authUser) {
         dispatch(
           login({
@@ -53,6 +54,9 @@ function App() {
             </Route>
             <Route exact path="/home/vaccination-details">
               <VaccinationDetails/>
+            </Route>
+            <Route exact path="/home/covid-hospital-details">
+              <CovidHospitalDetails/>
             </Route>
             <Route path="*" component={NotFound} />
           </Switch>

@@ -1,0 +1,10 @@
+.covid__hospital__heading{
+    margin-top: 6rem;
+}
+
+
+@media only screen and (max-width: 600px){
+    .covid__hospital__Table{
+        font-size: small;
+    }
+}
