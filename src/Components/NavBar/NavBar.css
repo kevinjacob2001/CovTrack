@@ -7,6 +7,17 @@
     top: 0;
 }
 
+.nav__black{
+    transition-timing-function: ease-in;
+    transition: all 0.5s;
+  
+        background-color: #354762 !important;
+   
+}
+
+.navbar__link:hover{
+    color: #47517c !important;
+}
 .navText__color{
     color: white !important;
 }

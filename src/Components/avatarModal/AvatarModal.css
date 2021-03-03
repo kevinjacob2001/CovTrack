@@ -1,0 +1,23 @@
+.avatarImage:hover{
+    cursor: pointer;
+}
+
+
+
+.toggle__btn:hover{
+    background: #374967 !important;
+}
+
+.modal__card{
+    width: 17rem !important;
+}
+
+
+.footer__div{
+    display: flex;
+    align-items: center;
+}
+
+.toggle__btn{
+    margin-top: 1rem !important;
+}
