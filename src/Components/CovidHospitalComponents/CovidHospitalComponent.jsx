@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Select from "react-select";
 import axios from "axios";
 
@@ -6,8 +6,6 @@ import "./CovidHospitalComponent.css";
 import { Table } from "react-bootstrap";
 
 function CovidHospitalComponent() {
-  const [datas, setDatas] = useState([]);
-  const [options2, setOptions2] = useState(null);
   const [hospitalData, sethospitalData] = useState([]);
   const [flag, setFlag] = useState(false);
   const [selectedOption, setselectedOption] = useState(null);
@@ -31,7 +29,7 @@ function CovidHospitalComponent() {
     const request = await axios.get(
       "https://api.rootnet.in/covid19-in/hospitals/medical-colleges"
     );
-    let arr, arr2, arr3;
+    let arr, arr2;
     arr = request.data.data.medicalColleges.map((individual) => ({
       value: individual.state,
       city: individual.city,

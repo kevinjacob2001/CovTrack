@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import ChatBot from "react-simple-chatbot";
-import { selectUser, userSlice } from "../../features/userSlice";
+import { selectUser } from "../../features/userSlice";
 
 import "./ChatBot.css";
 

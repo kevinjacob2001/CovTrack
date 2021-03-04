@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React , {useEffect, useState} from 'react'
 
-import {Card,Accordion,Button,Table} from 'react-bootstrap'
+import {Card,Accordion,Button} from 'react-bootstrap'
 
 import './StateData.css'
 
@@ -29,7 +29,7 @@ function StateData() {
             <Accordion>
               {keys.map((item, ky) => {
                 let districts = stateData[item].districtData;
-                let district_keys = Object.keys(districts);
+              
 
                 let total_active = 0;
                 let total_confirmed = 0;

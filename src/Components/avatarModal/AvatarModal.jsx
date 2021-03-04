@@ -10,7 +10,6 @@ import "./AvatarModal.css";
 import CheckIcon from '@material-ui/icons/Check';
 import ToggleButton from '@material-ui/lab/ToggleButton';
 import db from '../../firebase'
-import Image from "./Group.svg";
 import { logout, selectUser } from "../../features/userSlice";
 
 

@@ -58,7 +58,7 @@ function Login() {
         <p className="text-light mt-4">An End-to-end COVID-19 stats platform</p>
       </div>
       <Button className="login__btn" onClick={signIn}>
-        <img width="30px" className="mr-3" src={Google} />
+        <img width="30px" alt="error" className="mr-3" src={Google} />
         Continue with Google
       </Button>
 

@@ -1,29 +1,13 @@
 import React,{useEffect,useState} from "react";
-
-import { useDispatch } from "react-redux";
 import {Link} from 'react-router-dom'
-import { Nav, Navbar, NavDropdown } from "react-bootstrap";
-import { useHistory } from "react-router-dom";
-import { logout } from "../../features/userSlice";
-import { auth } from "../../firebase";
+import { Nav, Navbar } from "react-bootstrap";
+
 
 import "./NavBar.css";
 import AvatarModal from "../avatarModal/AvatarModal";
 
 function NavBar() {
   const [show,handleShow]=useState(false);
-  const dispatch = useDispatch();
-  const history = useHistory();
-
-  const logoutUser = () => {
-    auth
-      .signOut()
-      .then(() => {
-        dispatch(logout());
-        history.push("/");
-      })
-      .then(() => {});
-  };
 
 
   const transitionNavBar=()=>{

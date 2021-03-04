@@ -1,7 +1,5 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
-import { selectUser } from '../../features/userSlice';
 import ChatBot from './ChatBot';
 
 // all available props
