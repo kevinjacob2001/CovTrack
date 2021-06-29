@@ -15,6 +15,11 @@
    
 }
 
+  .custom-toggler.navbar-toggler {
+    border-color: rgb(255, 255, 255) !important;
+   
+    background-color: rgb(238, 228, 228) !important;
+  } 
 .navbar__link:hover{
     color: #47517c !important;
 }

@@ -7,7 +7,7 @@ import './StateData.css'
 
 function StateData() {
    const [stateData,setstateData]=useState([])
-
+   
         useEffect(()=>{
             async function fetchData(){
                 const request=await axios.get("https://api.covid19india.org/state_district_wise.json");
@@ -15,11 +15,11 @@ function StateData() {
                 setstateData(request.data);
             }
             fetchData();
-        },[stateData])
+    
+        },[])
 
         let keys = Object.keys(stateData);
-        //console.log(keys)
-
+    
     return (
       
             <div className="row mt-5">
@@ -46,8 +46,9 @@ function StateData() {
                   let ob = districts[x];
                   ob["district_name"] = x;
                   district_list.push(ob);
+                 
                 }
-
+            
                
                 return (
                   <div className="container " >
@@ -90,6 +91,7 @@ function StateData() {
                             </thead>
                             <tbody>
                               {district_list.map((itm, ky) => {
+
                                 return (
                                   <tr>
                                     <td>{itm.district_name}</td>
@@ -107,7 +109,9 @@ function StateData() {
                     </Card>
                   </div>
                 );
-              })}
+              }
+              
+              )}
             </Accordion>
             </div>
             </div>

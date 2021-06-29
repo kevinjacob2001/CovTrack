@@ -23,7 +23,7 @@ function AvatarModal() {
   const dispatch = useDispatch();
   let history = useHistory();
   const logoutUser = () => {
-    console.log("logout clicked")
+    
     auth
       .signOut()
       .then(() => {
@@ -33,8 +33,8 @@ function AvatarModal() {
       .then(() => {});
   };
   const user = useSelector(selectUser);
-  console.log(user?.displayName);
-  console.log(user?.email);
+ 
+
 
 const confirmMail=()=>{
   if(!selected){

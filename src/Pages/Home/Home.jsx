@@ -18,6 +18,7 @@ function Home() {
         <StateData />
         <ThemedExample />
       </div>
+      
     </>
   );
 }

@@ -11,10 +11,10 @@ function StateWiseVaccineComponent() {
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(
-        "https://india-covid19vaccine.github.io/api/state_latest.json"
+        "https://www.mygov.in/sites/default/files/covid/vaccine/vaccine_counts_today.json"
       );
-      //console.log(request.data);
-      setstateData(request.data);
+      //console.log(request.data["vacc_st_data"]);
+      setstateData(request.data["vacc_st_data"]);
     }
     fetchData();
   }, [stateData]);
@@ -31,9 +31,8 @@ function StateWiseVaccineComponent() {
         <thead style={{ background: "#7ED8F2" }}>
           <tr>
             <th>State</th>
-            <th>Population</th>
-            <th>Total Vaccinated</th>
-            <th>Total fully vaccinated</th>
+            <th>Dose 1</th>
+            <th>Dose 2</th>
             <th>Total doses</th>
           </tr>
         </thead>
@@ -41,23 +40,17 @@ function StateWiseVaccineComponent() {
           {stateData.map((state) => {
             return (
               <tr>
-                <td>{state?.state}</td>
+             
+                <td>{state?.st_name}</td>
                 <NumberFormat
-                  value={state?.population}
+                  value={state?.dose1}
                   displayType={"text"}
                   thousandsGroupStyle="lakh"
                   thousandSeparator={true}
                   renderText={(value) => <td>{value}</td>}
                 />
                 <NumberFormat
-                  value={state?.total_vaccinated}
-                  displayType={"text"}
-                  thousandsGroupStyle="lakh"
-                  thousandSeparator={true}
-                  renderText={(value) => <td>{value}</td>}
-                />
-                <NumberFormat
-                  value={state?.total_fully_vaccinated}
+                  value={state?.dose2}
                   displayType={"text"}
                   thousandsGroupStyle="lakh"
                   thousandSeparator={true}
@@ -70,6 +63,7 @@ function StateWiseVaccineComponent() {
                   thousandSeparator={true}
                   renderText={(value) => <td>{value}</td>}
                 />
+             
               </tr>
             );
           })}

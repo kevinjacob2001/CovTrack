@@ -9,20 +9,22 @@ import "./App.css";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
 import NotFound from "./Components/NotFound";
-
+import { useAuthState } from "react-firebase-hooks/auth";
 import { useDispatch, useSelector } from "react-redux";
 import { login, logout, selectUser } from "./features/userSlice";
 import { auth } from "./firebase";
 import VaccinationDetails from "./Pages/VaccinationDetails/VaccinationDetails";
 import CovidHospitalDetails from "./Pages/CovidHospitalDetails/CovidHospitalDetails";
+import Loading from "./Pages/Loading/Loading";
 
 function App() {
   const user = useSelector(selectUser);
+  const [loading]=useAuthState(auth);
   const dispatch = useDispatch();
-  const history = useHistory();
+
 
   useEffect(() => {
-    console.log("hello");
+  
     auth.onAuthStateChanged((authUser) => {
       //console.log("user is", authUser);
       if (authUser) {
@@ -34,16 +36,18 @@ function App() {
             displayName: authUser.displayName,
           })
         );
-        history.push("/home");
+       
       } else {
         //user is logged out
         dispatch(logout());
-        history.push("/");
+    
       }
     });
-  }, [dispatch, history]);
+  }, [dispatch]);
+
 
   return (
+
     <Router>
       {user ? (
         <>
@@ -57,7 +61,9 @@ function App() {
             <Route exact path="/home/covid-hospital-details">
               <CovidHospitalDetails/>
             </Route>
-            <Route path="*" component={NotFound} />
+            <Route path='*' exact={true}>
+            <Loading/>
+                </Route>
           </Switch>
         </>
       ) : (
@@ -66,7 +72,9 @@ function App() {
             <Route exact path="/">
               <Login />
             </Route>
-            <Route path="*" component={NotFound} />
+            <Route path='*' exact={true}>
+            <Loading/>
+                </Route>
           </Switch>
         </>
       )}
