@@ -17,7 +17,7 @@ function StateWiseVaccineComponent() {
       setstateData(request.data["vacc_st_data"]);
     }
     fetchData();
-  }, [stateData]);
+  }, []);
   return (
     <>
       <h1 className="text-center text-light vaccine__heading">
